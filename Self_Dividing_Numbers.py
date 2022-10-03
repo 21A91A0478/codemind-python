@@ -6,7 +6,7 @@ def sdn(num):
         if d==0 or num%d!=0:
             return False
     return True
-        
+
 n=int(input())
 m=int(input())
 for i in range(n,m+1):
