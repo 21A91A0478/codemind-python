@@ -1,11 +1,14 @@
+def palindrome(n):
+    temp=n
+    s=0
+    while n>0:
+        r=n%10
+        s=s*10+r
+        n=n//10
+    if s==temp:
+        return True
+    else:
+        return False
+
 n=int(input())
-rev=0
-m=n
-while m>0:
-    temp=m%10
-    m=m//10
-    rev=rev*10+temp
-if rev==n:
-    print('True')
-else:
-    print('False')
+print(palindrome(n))
