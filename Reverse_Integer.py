@@ -1,9 +1,9 @@
 def reverse(num):
     s=0
     while num:
-        d=num%10
+        r=num%10
+        s=s*10+r
         num=num//10
-        s=s*10+d
     return s
 n=int(input())
 s=0
