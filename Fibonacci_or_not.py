@@ -1,12 +1,15 @@
-import math
-def perfectsq(x):
-    s=int(math.sqrt(x))
-    return s*s==x
-
 n=int(input())
-temp1=(5*(n*n)+4)
-temp2=(5*(n*n)-4)
-if perfectsq(temp1)or perfectsq(temp2):
+c=0
+a=1
+b=1
+if n==0 or n==1:
     print('True')
 else:
-    print('False')
+    while c<n:
+        c=a+b
+        b=a
+        a=c
+    if c==n:
+        print('True')
+    else:
+        print('False')
