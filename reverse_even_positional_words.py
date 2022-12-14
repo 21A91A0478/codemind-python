@@ -1,8 +1,10 @@
 n=input()
 s=n.split()
 l=len(s)
-for i in range(0,l):
+a=[]
+for i in range(l):
     if i%2==0:
-        print(s[i][::-1],end=' ')
+        a.append(s[i][::-1])
     else:
-        print(s[i],end=' ')
+        a.append(s[i])
+print(' '.join(a))
