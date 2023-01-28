@@ -1,0 +1,11 @@
+N=int(input())
+l=list(map(int,input().split()))
+a=[]
+for i in l:
+    if i not in a and i%2!=0:
+        a.append(i)
+c=0
+for j in a:
+    if j%2!=0:
+        c=c+1
+print(c)
