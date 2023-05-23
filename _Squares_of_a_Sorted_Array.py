@@ -1,9 +1,7 @@
 n = int(input())
 l = list(map(int,input().split()))
-l.sort()
-a = []
+lst = []
 for i in l:
-    a.append(i*i)
-a.sort()
-for i in a:
-    print(i,end=' ')
+    lst.append(i*i)
+s = sorted(lst)
+print(*s)
