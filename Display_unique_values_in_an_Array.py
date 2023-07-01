@@ -4,8 +4,7 @@ a = []
 for i in l:
     if l.count(i) == 1:
         a.append(i)
-if len(a) != 0:
-    for i in a:
-        print(i,end=' ')
+if a:
+    print(*a)
 else:
-    print("-1")
+    print('-1')
