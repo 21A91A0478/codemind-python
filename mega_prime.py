@@ -1,30 +1,27 @@
-def prime(num):
-    count=0
-    for k in range(1,num+1):
-        if num%k==0:
-            count=count+1
-    if count==2:
-        return 1
-    else:
-        return 0
+#Mega Prime
+def prime(n):
+    if n < 2:
+        return False
+    c = 0
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            c += 1
+    if c == 0:
+        return True
+    return False
 
-
-n=int(input())
-c=0
-for i in range(1,n+1):
-    if n%i==0:
-        c=c+1
-s=0
-a=[]
-while n:
-    d=n%10
-    n=n//10
-    a.append(d)
-for j in a:
-    cc=0
-    if prime(j)==1:
-        cc=cc+1
-if c==2 and cc==1:
-    print('Mega Prime')
+n = int(input())
+l = []
+temp = n
+while temp:
+    d = temp % 10
+    temp = temp // 10
+    l.append(d)
+c = 0
+for i in l:
+    if prime(i)==True:
+        c += 1
+if c==len(l) and prime(n)==True:
+    print("Mega Prime")
 else:
-    print('Not Mega Prime')
+    print("Not Mega Prime")
