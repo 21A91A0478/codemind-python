@@ -1,6 +1,9 @@
+from collections import Counter
 n = int(input())
 l = list(map(int,input().split()))
-for i in l:
-    if l.count(i) > 1:
+c = Counter(l)
+d = dict(c)
+m = max(d.values())
+for i, j in d.items():
+    if j == m:
         print(i)
-        break
