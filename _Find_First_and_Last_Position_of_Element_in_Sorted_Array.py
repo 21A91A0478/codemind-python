@@ -1,14 +1,11 @@
 n = int(input())
 l = list(map(int,input().split()))
-num = int(input())
-a = []
-b = [-1,-1]
-for i in range(len(l)):
-    if l[i] == num:
-        a.append(i)
-if len(a) != 0:
-    for i in a:
-        print(i,end=' ')
+t = int(input())
+r = l[::-1]
+if t not in l:
+    print(-1, -1)
 else:
-    for i in b:
-        print(i,end=' ')
+    f = l.index(t)
+    e = n - (r.index(t)+1)
+    print(f, e)
+    
